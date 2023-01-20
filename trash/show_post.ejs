@@ -1,0 +1,48 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">  
+        <table class="show_post_table">
+            <thead>
+                <tr>
+                    <td>제목</td>            
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>내용</td>
+                </tr>                    
+            </tbody>
+        </table>
+                    
+        <!-- form handling -->
+        <form method="POST" id="update_content">
+            
+        </form>
+
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-post" class="border-shadow">
+                <span class="text-gradient">글쓰기</span>
+            </a>
+        </div> 
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-post" class="border-shadow">
+                <span class="text-gradient">삭제</span>
+            </a>
+        </div>
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-post" class="border-shadow">
+                <span class="text-gradient">수정</span>
+            </a>
+        </div>
+                   
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

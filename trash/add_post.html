@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="./assets/css/style.css">    
+    <link rel="stylesheet" href="./assets/css/add_post_style.css"> 
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">게시판</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main Site -->
+<main id="site-main">
+    <div class="container">  
+        <div class="form-title text-center">
+            <h2 class="text-dark">게시글 작성</h2>
+            <span class="text-light">새 게시글을 작성합니다</span>
+        </div>
+        <!-- form handling -->
+        <form method="POST" id="add_post">
+            <div>
+                <input type="hidden" name="id" value="">
+                <input type="text" name="name" value="" placeholder="작성자">
+                <input type="password" name="password" value="" placeholder="비밀번호">
+            </div>
+            <div>
+                <input class="input-subject" type="text" name="subject" value="" placeholder="제목">
+            </div>
+            <div>
+                <textarea class="textarea-content" name="content" placeholder="내용"></textarea>
+            </div>               
+        </form>
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-post" class="border-shadow">
+                <span class="text-gradient">등록</span>
+            </a>
+        </div>
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-post" class="border-shadow">
+                <span class="text-gradient">취소</span>
+            </a>
+        </div>
+    </div>
+</main>
+<!-- /Main Site -->
+</body>
+</html>

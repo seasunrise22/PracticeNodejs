@@ -1,0 +1,16 @@
+<!-- form handling -->
+<form method="POST">
+    <div>
+        <input type="text" name="author" value="" placeholder="작성자">
+        <input type="password" name="password" value="" placeholder="비밀번호">
+    </div>
+    <div>
+        <input id="subject" type="text" name="title" value="" placeholder="제목">
+    </div>
+    <div>
+        <textarea id="textarea" name="body" placeholder="내용"></textarea>
+    </div>
+
+    <button type="submit" onclick="javascript:form.action='/api/post'" id="post-btn">등록</button>
+    <button type="button" onclick="location.href='/board'" id="post-btn">취소</button>
+</form>

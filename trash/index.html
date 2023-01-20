@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="../assets/css/style.css"
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">게시판</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">  
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>제목 예시</td>
+                            <td>아무개</td>
+                            <td>2023-01-15</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-content" class="border-shadow">
+                    <span class="text-gradient">글쓰기</span>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- /Main Site -->
+</body>
+</html>
