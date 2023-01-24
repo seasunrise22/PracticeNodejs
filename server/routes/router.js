@@ -5,7 +5,7 @@ const controller = require('../controller/controller')
 
 // route.get('/', services.homeRoutes)
 route.get('/', services.board)
-route.get('/board', services.board)
+route.get('/board/:page', services.board)
 route.get('/show_post', services.show_post)
 route.get('/add_post', services.add_post)
 

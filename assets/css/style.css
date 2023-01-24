@@ -95,19 +95,19 @@ table {
   width: 100%;
 }
 
-.table td,
-.table th {
+.postlist td,
+.postlist th {
   padding: 0.75em;
   vertical-align: top;
   text-align: center;
   border-top: 1px solid var(--border);
 }
 
-.table tr:hover {
+.postlist tr:hover {
   background-color: #06d6a0;
 }
 
-.table .thead-dark th {
+.postlist .thead-dark th {
   color: #fff;
   background-color: var(--dark);
   background-color: #32383e;
@@ -127,4 +127,19 @@ table {
   height: 3em;
   float: right;
   margin-left: 0.5em;
+}
+
+/* _show_post style */
+#pagination-ul {
+  list-style: none;
+  text-align: center;
+  font-size: 1.5em;
+}
+#pagination-ul > li {
+  display: inline-block;
+  margin: 0 0.3em;
+}
+#pagination-ul li > a:visited {
+  text-decoration: none;
+  color: black;
 }
