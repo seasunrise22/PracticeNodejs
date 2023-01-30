@@ -4,7 +4,7 @@
     <td><%= ((perPage*current)-perPage)+(i+1) %></td>
     <td><%=posts[i].title%></td>
     <td><%=posts[i].author%></td>
-    <td></td>
+    <td><%=moment(posts[i].created).format('YYYY-MM-DD hh:mm:ss')%></td>
     <td></td>
 </tr>
 

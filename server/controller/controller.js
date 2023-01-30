@@ -22,7 +22,7 @@ exports.create = (req, res) => {
     post
         .save(post)
         .then(data => {
-            res.redirect('/board')
+            res.redirect('/board/1')
         })
         .catch(err => {
             res.status(500).send({

@@ -1,5 +1,6 @@
 const axios = require('axios')
 const boardDB = require('../model/model')
+const moment = require('moment')
 
 exports.homeRoutes = (req, res) => {
     res.render('index')
@@ -13,6 +14,9 @@ exports.board = (req, res) => {
         .then((response) => {
             boardDB
                 .find({})
+                .sort({
+                    created: -1
+                })
                 .skip((perPage * page) - perPage)
                 .limit(perPage)
                 .exec(function (err, posts) {
@@ -22,7 +26,8 @@ exports.board = (req, res) => {
                             perPage: perPage,
                             posts: posts,
                             current: page,
-                            pages: Math.ceil(count / perPage)
+                            pages: Math.ceil(count / perPage),
+                            moment: moment
                         })
 
                     })

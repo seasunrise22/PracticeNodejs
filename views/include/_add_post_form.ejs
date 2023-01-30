@@ -1,6 +1,7 @@
 <!-- form handling -->
 <form method="POST">
     <div>
+        <input type="hidden" name="created">
         <input type="text" name="author" value="" placeholder="작성자">
         <input type="password" name="password" value="" placeholder="비밀번호">
     </div>
@@ -12,5 +13,5 @@
     </div>
 
     <button type="submit" onclick="javascript:form.action='/api/post'" id="post-btn">등록</button>
-    <button type="button" onclick="location.href='/board'" id="post-btn">취소</button>
+    <button type="button" onclick="location.href='/board/1'" id="post-btn">취소</button>
 </form>
