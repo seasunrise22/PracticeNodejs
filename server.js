@@ -12,7 +12,6 @@ dotenv.config({path: 'config.env'})
 app.set('port', process.env.PORT || 8080)
 
 /* 공통 미들웨어 */
-app.use(express.static(__dirname + '/assets/css'))
 app.use(morgan('dev'))
 app.use(cookieParser('secret@1234')) // 암호화 된 쿠키를 사용하기 위한 임의의 문자 전송
 app.use(session({
@@ -27,6 +26,7 @@ app.use(session({
 }))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(express.static(__dirname + '/assets/css'))
 
 /* mongoDB 연결 */
 connectDB()

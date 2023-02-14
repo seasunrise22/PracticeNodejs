@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <h1>테스트!!!</h1>
-    <p>ㅎㅎ 테스트</p>
-</body>
+    <div id="app">
+        <h1>뷰 라우터 예제</h1>
+        <p>
+            <router-link to="/main">Main 컴포넌트로 이동</router-link>
+            <router-link to="/login">Login 컴포넌트로 이동</router-link>
+        </p>
+        <router-view></router-view>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script>
+    <script>
+        // Main, Login 컴포넌트 내용 정의
+        const Main = { template: '<div>main</div>' }
+        const Login = { template: '<div>login</div>' }
+        // 각 url에 해당하는 컴포넌트 등록
+        const routes = [
+            { path: '/main', component: Main },
+            { path: '/login', component: Login }
+        ]
+        // 뷰 라우터 정의
+        const router = new VueRouter({
+            routes
+        })
+        // 뷰 라우터를 인스턴스에 등록
+        const app = new Vue({
+            router
+        }).$mount('#app')
+    </script>    
+</body>
 </html>
